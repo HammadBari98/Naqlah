@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقل خالي من التوتر</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/expo-arabic" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/area-normal" rel="stylesheet">
+    <link href="https://cdn.example.com/shamel-font.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-50">
+
+<!-- Simple Header -->
+<header class="flex flex-col justify-center items-center px-16 py-3 shadow-[0px_4px_40px_rgba(0,0,0,0.05)] max-md:px-5">
+  <div class="flex flex-wrap max-md:gap-0 gap-10 justify-between items-center w-full max-w-[1170px] max-md:max-w-full">
+    <div class="flex gap-3 items-center self-stretch my-auto">
+       
+            <img src="assets/img/logo.png" alt="" class="w-[50px] md:hidden ">
+       
+     <!-- Dropdown 1 (Profile) -->
+
+      <div class="relative inline-block text-right">
+          <!-- Profile Button -->
+          <button class="bg-transparent border-0 p-0 focus:outline-none" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="assets/img/profile.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full object-cover">
+          </button>
+      
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end mt-2 p-4 rounded-xl  w-80 space-y-3 border-2 border-[var(--border-color)] rounded-lg" aria-labelledby="profileDropdown" style="background: #fff; direction:rtl">
+          <!-- Profile Section -->
+          <li class="flex items-center justify-between pb-3">
+              <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--primary)]">
+                  <img src="assets/img/profile.svg" alt="Profile" class="w-full h-full object-cover">
+              </div>
+              
+              <div class="text-right">
+                  <h4 class="text-base font-bold mb-0">محمد العسيري</h4>
+              </div>
+              </div>
+              <div class="text-[var(--light2)] hover:text-[var(--primary)] transition-colors">
+              <img src="assets/img/setting.svg" alt="Settings" class="w-10 no-underline">
+              </div>
+          </li>
+          
+          <!-- Account Settings Text -->
+          <p class="text-[var(--light2)]text-sm text-right  mb-2" style="    margin-top: -5px;">إعدادات الحساب</p>
+      
+          <!-- Menu Items -->
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)] text-right">آخر الطلبات</div>
+                  <div class="text-xs text-gray-400 text-right">إدارة إستحقاقات الإعلانات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right" >التنبيهات</div>
+                  <div class="text-xs text-gray-400 text-right">تخصيص إعدادات الإشعارات والتنبيهات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right">سياسة الخصوصية</div>
+                  <div class="text-xs text-gray-400 text-right">الاطلاع على السياسات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right">شروط الاستخدام</div>
+                  <div class="text-xs text-gray-400 text-right">القواعد والشروط الخاصة باستخدام التطبيق</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+          </ul>
+      </div>
+
+        <!-- Dropdown 2 (Language) -->
+        <div class="dropdown relative">
+          <button class="dropdown-toggle bg-transparent border-0 p-0 focus:outline-none" type="button" data-bs-toggle="dropdown">
+            <div class="flex relative flex-col self-stretch my-auto aspect-[1.8] w-[72px]">
+              <img src="assets/img/lang.svg" 
+                   alt="Language" 
+                   class="object-cover absolute inset-0 size-full">
+              <div class="flex relative shrink-0 h-10 rounded-2xl border border-white border-solid"></div>
+            </div>
+          </button>
+          
+          <ul class="dropdown-menu dropdown-menu-end min-w-40 py-2 bg-white rounded-lg border border-gray-200 mt-2">
+              <li class="language-option" data-lang="ar">
+                <a class="dropdown-item text-end p-2 flex justify-between items-center hover:bg-gray-50" href="#">
+                  <i class="fas fa-check text-[var(--primary)] ml-2 opacity-0"></i>
+                  <span>العربية</span>
+                </a>
+              </li>
+              
+              <!-- Divider -->
+              <li class="border-t border-gray-200 w-[90%] mx-auto"></li>
+              
+              <li class="language-option" data-lang="en">
+                <a class="dropdown-item text-end p-2 flex justify-between items-center hover:bg-gray-50" href="#">
+                  <i class="fas fa-check text-[var(--primary)] ml-2 opacity-0"></i>
+                  <span>English</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+       
+        
+
+        <!-- Dropdown 3 (Notifications) -->
+        <div class="relative inline-block text-right">
+          <!-- Profile Button -->
+          <button class="bg-transparent p-0 focus:outline-none border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/img/noti.svg"
+                 alt="Profile"
+                 class="w-10 h-10 rounded-full object-cover border-[var(--white)]">
+          </button>
+        
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end mt-2 p-2 rounded-xl  w-80 space-y-3 border-2 border-[var(--border-color)] rounded-lg" aria-labelledby="profileDropdown" style="background: #fff; direction:rtl">
+            <!-- Profile Section -->
+            <li class="">
+              <div class="d-flex justify-content-between p-1">
+                  <p style="color:#6B6E80">
+                      آخر التنبيهات
+                  </p>
+                  <p style="color:var(--primary);font-size: 14px">
+                      الكل
+                  </p>
+              </div>
+              <div class="row">
+                  <div class="col-2">
+                      <div class="relative inline-block">
+                          <!-- Notification Icon with Dot -->
+                          <div class="relative w-12 h-12">
+                            <img src="assets/img/noti-primary.svg" alt="Notifications" class="w-full h-full object-cover">
+                            <!-- Unread Notification Dot -->
+                            <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border border-white"></span>
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="col-10 px-4">
+                      <div class="flex justify-content-between gap-3">
+               
+                
+                          <div class="text-right">
+                            <h4 class="text-sm mb-0">تم اكتمال النقل!</h4>
+                        
+                          </div>
+                         
+                              <p  class="text-xs" style="color:#A6A6A6">‏منذ 4 د</p>
+                             
+                        </div>
+
+                        <p class="text-sm text-right  mb-2 text-xs" style="margin-top: 0px;color:#7E7E7E">
+                          تم توصيل أثاثك بنجاح إلى الموقع الجديد. نتمنى لك راحة وسعادة في منزلك الجديد
+                              !
+                          </p>
+                  </div>
+                 
+              </div> 
+              <li class="border-t border-gray-200 w-[90%] mx-auto h-4"></li>
+              <div class="row">
+                  <div class="col-2">
+                      <div class="relative inline-block">
+                          <!-- Notification Icon with Dot -->
+                          <div class="relative w-12 h-12">
+                            <img src="assets/img/noti-primary.svg" alt="Notifications" class="w-full h-full object-cover">
+                            <!-- Unread Notification Dot -->
+                         
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="col-10 px-4">
+                      <div class="flex justify-content-between gap-3">
+               
+                
+                          <div class="text-right">
+                            <h4 class="text-sm mb-0">تم اكتمال النقل!</h4>
+                        
+                          </div>
+                         
+                              <p  class="text-xs" style="color:#A6A6A6">‏منذ 4 د</p>
+                             
+                        </div>
+
+                        <p class="text-sm text-right  mb-2 text-xs" style="margin-top: 0px;color:#7E7E7E">
+                          تم توصيل أثاثك بنجاح إلى الموقع الجديد. نتمنى لك راحة وسعادة في منزلك الجديد
+                              !
+                          </p>
+                  </div>
+                 
+              </div> 
+
+            
+            </li>
+            
+            
+        
+          </ul>
+        </div>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-10 items-center self-stretch my-auto text-lg font-semibold text-white min-w-60 max-md:max-w-full">
+      <ul class="flex gap-6 items-center self-stretch my-auto min-w-60 list-none">
+        <li class="self-stretch my-auto">تواصل معنا</li>
+        <li class="self-stretch my-auto">من نحن</li>
+        <li class="self-stretch my-auto">تتبع النقل</li>
+        <li class="self-stretch my-auto whitespace-nowrap rounded-none w-[52px]">
+          الرئيسية
+        </li>
+        <li class="d-none d-lg-block">&nbsp;</li>
+        <li>
+            <img src="assets/img/logo.png" alt="">
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-white text-2xl" id="mobile-menu-toggle">
+        ☰
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-menu w-full md:hidden" id="mobile-menu">
+      <ul class="flex flex-col gap-4 py-4 px-5 text-white font-semibold text-lg list-none text-end">
+          <li><a href="#" class="block py-2 nav-links">الرئيسية</a></li>
+          <li><a href="#" class="block py-2 nav-links">تتبع النقل</a></li>
+          <li><a href="#" class="block py-2 nav-links">من نحن</a></li>
+          <li><a href="#" class="block py-2 nav-links">تواصل معنا</a></li>
+         
+      </ul>
+  </div>
+</header>
+
+<!-- topBar -->
+<section >
+    <div class="flex flex-col justify-center items-center shadow-[0px_4px_40px_rgba(0,0,0,0.05)] pt-4 ">
+        <div class="flex flex-wrap max-md:gap-0 gap-10 justify-end items-center w-full max-w-[1170px] max-md:max-w-full max-md:mr-10">
+            <p class="text-right color-light ">الرئيسية <i class="fa-solid fa-minus"></i> <span class="color-dark">أطلب نقلة</span></p>
+        </div>
+ </div>
+</section>
+<!-- Progress Section -->
+<section class="mx-auto mt-4 px-4">
+    <div class="flex justify-center">
+        <div class="w-full max-w-[750px] flex items-center gap-2">
+            <div class="flex-1 h-3  rounded-full overflow-hidden" style="direction: rtl;">
+                <div class="h-full  w-3/5 rounded-full bg-[var(--primary)]"></div>
+            </div>
+            <img src="assets/img/Back.png" alt="" class="w-10 h-10">
+        </div>
+    </div>
+</section>
+
+  
+<!-- Form Section -->
+<div style="position: relative;">
+    <form class="contact-form w-100 bg-white p-0 rounded-lg shadow-sm p-4" style="margin-bottom: 80px; max-width: 750px !important;">
+      <div class="form-group">
+        <label for="heading" class="mb-1 text-lg" style="font-weight: bold;">تفاصيل الأثاث</label><br>
+        <label for="sub-heading" class="mb-1 text-sm">يرجى إدخال كافة المعلومات المطلوبة</label>
+      </div>
+  
+      
+      
+      <div class="form-row d-flex gap-3">
+        <!-- Standard Select Dropdown -->
+        <div class="form-col col-md-6 flex-fill">
+          <div class="form-group" style="position: relative;">
+            <label for="subject1" class="mb-1">عدد الغرف</label>
+            <select id="subject1" class="form-select">
+              <option value="" disabled selected>اختر عدد الغرف</option>
+              <option value="استفسار">استفسار</option>
+              <option value="شكوى">شكوى</option>
+              <option value="مقترح">مقترح</option>
+            </select>
+            <!-- <i class="fa-solid fa-chevron-down dropdown-icon"></i> -->
+          </div>
+        </div>
+      
+        <!-- Custom Multi-Select Dropdown -->
+        <div class="form-col col-md-6 flex-fill">
+          <div class="form-group" style="position: relative;">
+            <label class="mb-1">القطع والأثاث</label>
+            
+            <!-- Hidden select for form submission -->
+            <select id="furniture-select" name="furniture" multiple class="hidden-select">
+              <option value="mirrors">مرايا</option>
+              <option value="appliances">أجهزة كهربائية</option>
+              <option value="cabinets">دواليب</option>
+              <option value="beds">أسرّة</option>
+              <option value="carpets">سجاد</option>
+              <option value="desks">مكاتب</option>
+            </select>
+          
+            <!-- Custom Dropdown Trigger -->
+            <div class="custom-dropdown" id="dropdownToggle">
+              <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+              <span id="dropdownText">حدد القطع والأثاث إن وجد</span>
+            </div>
+          
+            <!-- Custom Dropdown Content -->
+            <div class="dropdown-panel" id="dropdownPanel">
+              <div class="item-box" data-value="mirrors">
+                <img src="assets/img/cross.png" class="h-4 w-4" alt="">
+                <p class="mb-0 text-sm">مرايا</p>
+              </div>
+              <div class="item-box" data-value="appliances">
+                <img src="assets/img/cross.png" class="h-4 w-4" alt="">
+                <p class="mb-0 text-sm">أجهزة كهربائية</p>
+              </div>
+              <!-- Other items... -->
+            </div>
+          
+            <!-- Selected items container -->
+            <div id="selected-items-container" class="selected-items-container"></div>
+          </div>
+        </div>
+      </div>
+     
+       
+      <div class="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 mt-4">
+        <!-- Column 1 -->
+        <div class="form-group mb-0">
+          <label for="city1" class=" max-md:text-sm mb-1">عدد الأسرّة</label>
+          <input type="text" id="city1" class="form-input w-full" placeholder="أدخل العدد">
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="form-group mb-0">
+          <label for="city2" class=" max-md:text-sm mb-1">عدد الدواليب</label>
+          <input type="text" id="city2" class="form-input w-full" placeholder="أدخل العدد">
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="form-group">
+          <label for="city3" class=" max-md:text-sm mb-1">عدد الأجهزة الكهربائية</label>
+          <input type="text" id="city3" class="form-input w-full" placeholder="أدخل العدد">
+        </div>
+        
+        <!-- Column 4 -->
+        <div class="form-group">
+          <label for="city4" class=" max-md:text-sm mb-1">عدد المرايا</label>
+          <input type="text" id="city4" class="form-input w-full" placeholder="أدخل العدد">
+        </div>
+      </div>
+
+      <div class="form-group mb-0">
+        <label for="city1" class=" max-md:text-sm mb-1 pt-4">رفع صور وفيديو الأثاث</label>
+        
+      </div>
+ 
+      
+
+<!-- Upload Section -->
+<div class="upload-area" id="uploadArea">
+  <label for="fileUpload">
+    <img src="assets/img/upload.png" alt="Upload Icon" class="upload-icon">
+    <p>أرفق بصيغة: PNG, JPG</p>
+  </label>
+  <input type="file" id="fileUpload" accept="image/png, image/jpeg" multiple>
+</div>
+
+<!-- Preview Container -->
+<div class="preview-container" id="previewContainer"></div>
+
+      <!-- Buttons -->
+      <div class="buttons-container">
+        <button type="submit" class="progress-btn2 col-6">التالي</button>
+        <button type="button" class="back-btn col-6">تراجع</button>
+      </div>
+    </form>
+  </div>
+  
+  
+  <div style="width:100%;height: 50px;"></div>
+<!-- Footer -->
+<footer class="text-white pt-5 pb-3 " style="background-color:var(--primary); background-image: url('assets/img/footer-bg.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+  <div class="container">
+    <div class="row text-center text-md-end align-items-start">
+      
+      <!-- App Links -->
+      <div class="col-md-2 mb-4">
+        <div class="d-grid gap-3">
+          <a href="#" class="btn btn-light text-dark d-flex align-items-center justify-content-center gap-2; width:90%">
+            <i class="fab fa-apple"></i>&nbsp; App Store
+          </a>
+          <a href="#" class="btn btn-light text-dark d-flex align-items-center justify-content-center gap-2; width:90%">
+            <i class="fab fa-google-play"></i>&nbsp; Play Store
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Column 1 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">روابط أخرى</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">سياسة الخصوصية</a></li>
+          <li><a href="#" class="text-white text-decoration-none">الشروط والأحكام</a></li>
+          <li><a href="#" class="text-white text-decoration-none">الأسئلة والإستفسارات</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 2 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">في الموقع</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">تتبع النقل</a></li>
+          <li><a href="#" class="text-white text-decoration-none">تواصل معنا</a></li>
+          <li><a href="#" class="text-white text-decoration-none">العنوان</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 3 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">في الموقع</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">الرئيسية</a></li>
+          <li><a href="#" class="text-white text-decoration-none">خدماتنا</a></li>
+          <li><a href="#" class="text-white text-decoration-none">من نحن</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo & Social -->
+      <div class="col-md-4 text-center text-md-end d-flex flex-column align-items-center align-items-md-end">
+        <img src="assets/img/footer-logo.png" class="mb-3" style="max-width: 130px;" alt="footer logo">
+        
+        <div class="mb-3 d-flex gap-3">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <p class="mb-0"><i class="far fa-copyright"></i> 2025 جميع الحقوق محفوظة لدى شركة نقلة</p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+
+</body>
+</html>

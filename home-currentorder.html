@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقل خالي من التوتر</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/expo-arabic" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/area-normal" rel="stylesheet">
+    <link href="https://cdn.example.com/shamel-font.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-50">
+
+<!-- Simple Header -->
+<header class="flex flex-col justify-center items-center px-16 py-3 shadow-[0px_4px_40px_rgba(0,0,0,0.05)] max-md:px-5">
+  <div class="flex flex-wrap max-md:gap-0 gap-10 justify-between items-center w-full max-w-[1170px] max-md:max-w-full">
+    <div class="flex gap-3 items-center self-stretch my-auto">
+       
+            <img src="assets/img/logo.png" alt="" class="w-[50px] md:hidden ">
+       
+     <!-- Dropdown 1 (Profile) -->
+
+      <div class="relative inline-block text-right">
+          <!-- Profile Button -->
+          <button class="bg-transparent border-0 p-0 focus:outline-none" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="assets/img/profile.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full object-cover">
+          </button>
+      
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end mt-2 p-4 rounded-xl  w-80 space-y-3 border-2 border-[var(--border-color)] rounded-lg" aria-labelledby="profileDropdown" style="background: #fff; direction:rtl">
+          <!-- Profile Section -->
+          <li class="flex items-center justify-between pb-3">
+              <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--primary)]">
+                  <img src="assets/img/profile.svg" alt="Profile" class="w-full h-full object-cover">
+              </div>
+              
+              <div class="text-right">
+                  <h4 class="text-base font-bold mb-0">محمد العسيري</h4>
+              </div>
+              </div>
+              <div class="text-[var(--light2)] hover:text-[var(--primary)] transition-colors">
+              <img src="assets/img/setting.svg" alt="Settings" class="w-10 no-underline">
+              </div>
+          </li>
+          
+          <!-- Account Settings Text -->
+          <p class="text-[var(--light2)]text-sm text-right  mb-2" style="    margin-top: -5px;">إعدادات الحساب</p>
+      
+          <!-- Menu Items -->
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)] text-right">آخر الطلبات</div>
+                  <div class="text-xs text-gray-400 text-right">إدارة إستحقاقات الإعلانات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right" >التنبيهات</div>
+                  <div class="text-xs text-gray-400 text-right">تخصيص إعدادات الإشعارات والتنبيهات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right">سياسة الخصوصية</div>
+                  <div class="text-xs text-gray-400 text-right">الاطلاع على السياسات</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+      
+          <li class="group">
+              <div class="flex justify-between items-center px-2 py-2 rounded-lg transition-colors">
+              <div>
+                  <div class="text-sm font-medium text-gray-700 group-hover:text-[var(--primary)]  text-right">شروط الاستخدام</div>
+                  <div class="text-xs text-gray-400 text-right">القواعد والشروط الخاصة باستخدام التطبيق</div>
+              </div>
+              <i class="fa-solid fa-chevron-left text-xs text-gray-400 no-underline"></i>
+              </div>
+          </li>
+          </ul>
+      </div>
+
+        <!-- Dropdown 2 (Language) -->
+        <div class="dropdown relative">
+          <button class="dropdown-toggle bg-transparent border-0 p-0 focus:outline-none" type="button" data-bs-toggle="dropdown">
+            <div class="flex relative flex-col self-stretch my-auto aspect-[1.8] w-[72px]">
+              <img src="assets/img/lang.svg" 
+                   alt="Language" 
+                   class="object-cover absolute inset-0 size-full">
+              <div class="flex relative shrink-0 h-10 rounded-2xl border border-white border-solid"></div>
+            </div>
+          </button>
+          
+          <ul class="dropdown-menu dropdown-menu-end min-w-40 py-2 bg-white rounded-lg border border-gray-200 mt-2">
+              <li class="language-option" data-lang="ar">
+                <a class="dropdown-item text-end p-2 flex justify-between items-center hover:bg-gray-50" href="#">
+                  <i class="fas fa-check text-[var(--primary)] ml-2 opacity-0"></i>
+                  <span>العربية</span>
+                </a>
+              </li>
+              
+              <!-- Divider -->
+              <li class="border-t border-gray-200 w-[90%] mx-auto"></li>
+              
+              <li class="language-option" data-lang="en">
+                <a class="dropdown-item text-end p-2 flex justify-between items-center hover:bg-gray-50" href="#">
+                  <i class="fas fa-check text-[var(--primary)] ml-2 opacity-0"></i>
+                  <span>English</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+       
+        
+
+        <!-- Dropdown 3 (Notifications) -->
+        <div class="relative inline-block text-right">
+          <!-- Profile Button -->
+          <button class="bg-transparent p-0 focus:outline-none border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/img/noti.svg"
+                 alt="Profile"
+                 class="w-10 h-10 rounded-full object-cover border-[var(--white)]">
+          </button>
+        
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu dropdown-menu-end mt-2 p-2 rounded-xl  w-80 space-y-3 border-2 border-[var(--border-color)] rounded-lg" aria-labelledby="profileDropdown" style="background: #fff; direction:rtl">
+            <!-- Profile Section -->
+            <li class="">
+              <div class="d-flex justify-content-between p-1">
+                  <p style="color:#6B6E80">
+                      آخر التنبيهات
+                  </p>
+                  <p style="color:var(--primary);font-size: 14px">
+                      الكل
+                  </p>
+              </div>
+              <div class="row">
+                  <div class="col-2">
+                      <div class="relative inline-block">
+                          <!-- Notification Icon with Dot -->
+                          <div class="relative w-12 h-12">
+                            <img src="assets/img/noti-primary.svg" alt="Notifications" class="w-full h-full object-cover">
+                            <!-- Unread Notification Dot -->
+                            <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border border-white"></span>
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="col-10 px-4">
+                      <div class="flex justify-content-between gap-3">
+               
+                
+                          <div class="text-right">
+                            <h4 class="text-sm mb-0">تم اكتمال النقل!</h4>
+                        
+                          </div>
+                         
+                              <p  class="text-xs" style="color:#A6A6A6">‏منذ 4 د</p>
+                             
+                        </div>
+
+                        <p class="text-sm text-right  mb-2 text-xs" style="margin-top: 0px;color:#7E7E7E">
+                          تم توصيل أثاثك بنجاح إلى الموقع الجديد. نتمنى لك راحة وسعادة في منزلك الجديد
+                              !
+                          </p>
+                  </div>
+                 
+              </div> 
+              <li class="border-t border-gray-200 w-[90%] mx-auto h-4"></li>
+              <div class="row">
+                  <div class="col-2">
+                      <div class="relative inline-block">
+                          <!-- Notification Icon with Dot -->
+                          <div class="relative w-12 h-12">
+                            <img src="assets/img/noti-primary.svg" alt="Notifications" class="w-full h-full object-cover">
+                            <!-- Unread Notification Dot -->
+                         
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="col-10 px-4">
+                      <div class="flex justify-content-between gap-3">
+               
+                
+                          <div class="text-right">
+                            <h4 class="text-sm mb-0">تم اكتمال النقل!</h4>
+                        
+                          </div>
+                         
+                              <p  class="text-xs" style="color:#A6A6A6">‏منذ 4 د</p>
+                             
+                        </div>
+
+                        <p class="text-sm text-right  mb-2 text-xs" style="margin-top: 0px;color:#7E7E7E">
+                          تم توصيل أثاثك بنجاح إلى الموقع الجديد. نتمنى لك راحة وسعادة في منزلك الجديد
+                              !
+                          </p>
+                  </div>
+                 
+              </div> 
+
+            
+            </li>
+            
+            
+        
+          </ul>
+        </div>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-10 items-center self-stretch my-auto text-lg font-semibold text-white min-w-60 max-md:max-w-full">
+      <ul class="flex gap-6 items-center self-stretch my-auto min-w-60 list-none">
+        <li class="self-stretch my-auto">تواصل معنا</li>
+        <li class="self-stretch my-auto">من نحن</li>
+        <li class="self-stretch my-auto">تتبع النقل</li>
+        <li class="self-stretch my-auto whitespace-nowrap rounded-none w-[52px]">
+          الرئيسية
+        </li>
+        <li class="d-none d-lg-block">&nbsp;</li>
+        <li>
+            <img src="assets/img/logo.png" alt="">
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-white text-2xl" id="mobile-menu-toggle">
+        ☰
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-menu w-full md:hidden" id="mobile-menu">
+      <ul class="flex flex-col gap-4 py-4 px-5 text-white font-semibold text-lg list-none text-end">
+          <li><a href="#" class="block py-2 nav-links">الرئيسية</a></li>
+          <li><a href="#" class="block py-2 nav-links">تتبع النقل</a></li>
+          <li><a href="#" class="block py-2 nav-links">من نحن</a></li>
+          <li><a href="#" class="block py-2 nav-links">تواصل معنا</a></li>
+         
+      </ul>
+  </div>
+</header>
+<div id="pageContent">
+
+<section class="hero-container">
+    <img
+        src="assets/img/home-banner.png"
+        class="hero-image"
+        alt="Moving Truck"
+    />
+    <article class="hero-content">
+        <h1 class="hero-title">
+            <span class="title-part1">ابدأ طلبك الآن واستمتع</span><br>
+            <span class="title-part2">بتجربة نقل خالية من التوتر!</span>
+        </h1>
+        <p class="hero-description">
+            جاهز للانتقال؟ احجز موعدًا، حدّد تفاصيلك وراقب فريقنا المحترف ينجز المهمة بكفاءة وسرعة
+        </p>
+        <button class="cta-button">
+            أطلب نقلة
+        </button>
+    </article>
+</section>
+
+<!-- Home Mid -->
+
+<section class="container mx-auto px-4">
+    <!-- Desktop Image (hidden on mobile) -->
+    <img 
+      src="assets/img/home-mid.svg" 
+      class="hidden sm:block mx-auto py-10 w-full max-w-6xl"
+      alt="Desktop Banner"
+    >
+  
+    <!-- Mobile Grid (shown only on mobile) -->
+    <div class="sm:hidden grid grid-cols-2 gap-0 bg-white rounded-lg overflow-hidden" style="border: 2px solid var(--border-color); border-radius: 8px;">
+      <!-- Row 1 -->
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid1.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="تتبع مباشر"
+        >
+        <p class="text-sm md:text-base">تتبع مباشر</p>
+      </div>
+      
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-bottom: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid2.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="فك وتركيب"
+        >
+        <p class="text-sm md:text-base">فك وتركيب</p>
+      </div>
+      
+      <!-- Row 2 -->
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-right: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid3.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="تغليف محكم"
+        >
+        <p class="text-sm md:text-base">تغليف محكم</p>
+      </div>
+      
+      <div class="flex flex-col items-center justify-center gap-2 p-4">
+        <img 
+          src="assets/img/home-mid4.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="نقل الأثاث"
+        >
+        <p class="text-sm md:text-base">نقل الأثاث</p>
+      </div>
+    </div>
+
+
+    <!-- cards -->
+    <section class="mx-auto py-10 w-full max-w-6xl">
+      <div class="d-flex justify-content-between" style="    margin-bottom: -25px;">
+          <p class="color-primary">الكل</p>
+  
+          <p class="text-bold text-lg color-dark"><strong>
+            عروض الشحن
+          </strong></p>
+      </div>
+      <div class="parent-box">
+          <div class="d-flex justify-content-between align-items-center">
+              <i class="fa-solid fa-chevron-left"></i>
+              <div class="d-flex align-items-center">
+                  <div style="margin-right: 20px;">
+                      <p style="text-align: right;    margin-bottom: 0px;    margin-top: 16px;" class="text-lg color-dark max-md:text-sm font-medium">شركات النقل</p>
+                      <p style="direction: rtl;color: var(--text-light);" class="max-md:text-sm ">4 عروض</span></p>
+                  </div>
+                  <img src="assets/img/bus.svg" class="circle-box" alt="">
+              </div>
+          </div>
+       
+        
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-md-4 d-flex mb-4">
+              <div  class="w-full bg-white p-2 space-y-4 text-right border-2 border-solid border-[var(--border-color)] rounded-lg flex flex-col h-full ">   <!-- Header Section -->
+                <div class="rtl border-b pb-4" dir="rtl">
+                  <div class="flex flex-col sm:flex-row justify-between items-start gap-3">
+                    <!-- Logo and Text Content - Full width on mobile -->
+                    <div class="flex items-start gap-3 w-full sm:w-auto sm:flex-grow">
+                      <div class="company-logo flex items-center justify-center shrink-0" 
+                           style="background-color: #FDFDFD; 
+                                  border-radius: 12px; 
+                                  border: 2px solid var(--border-color); 
+                                  padding: 10px; 
+                                  height: 70px; 
+                                  width: 70px;">
+                        <img src="assets/img/company-logo3.png" 
+                             class="max-w-full max-h-full object-contain" 
+                             alt="شركة فرسان الشام">
+                      </div>
+                      <div class="flex flex-col">
+                        <h2 class="text-sm font-medium mb-1">شركة فرسان الشام</h2>
+                        <span class="text-lg font-bold flex items-center gap-1">780 <img src="assets/img/riyal.svg" class="w-4 h-4"></span>
+                        <div class="text-gray-500 text-xs mt-1">3.15.2025 · 11:30 · الأحد</div>
+                      </div>
+                    </div>
+                  
+                    <!-- Accept Button - Full width on mobile -->
+                    <button onclick="openModal()" class="cursor-pointer font-semibold bg-[var(--primary)] text-white py-2 px-6 rounded-md hover:bg-orange-600 text-sm border border-solid border-[var(--border-color)] w-full sm:w-auto mt-3 sm:mt-0">
+                      قبول
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Services Tags -->
+                <div class="flex flex-wrap gap-2 justify-end">
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تنظيف بعد النقل</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب دواليب</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب مطبخ</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تغليف محكم</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">نقل أثاث</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed flex-grow">
+                  مرحبًا، نشكرك على اهتمامك بخدماتنا! نتميز باحترافية عالية في نقل الأثاث دون خدوش أو تلف، مع توفير تغليف آمن لحماية ممتلكاتك. ونلتزم بالمواعيد بدقة لضمان راحتك. أسعارنا شفافة بدون رسوم مخفية، بالإضافة إلى تأمين لحماية الأثاث أثناء النقل. نحن مستعدون لنقل أثاثك بكل سهولة، اضغط على "قبول" للبدء الآن!
+                </p>
+              </div>
+            </div>
+          
+            <!-- Second Card -->
+            <div class="col-md-4 d-flex mb-4">
+              <div  class="w-full bg-white p-2 space-y-4 text-right border-2 border-solid border-[var(--border-color)] rounded-lg flex flex-col h-full">  <!-- Header Section -->
+                <div class="rtl border-b pb-4" dir="rtl">
+                  <div class="flex flex-col sm:flex-row justify-between items-start gap-3">
+                    <!-- Logo and Text - Full width on mobile, auto on desktop -->
+                    <div class="flex items-start gap-3 w-full sm:w-auto sm:flex-grow">
+                      <div class="company-logo flex items-center justify-center shrink-0" 
+                           style="background-color: #FDFDFD; border-radius: 12px; border: 2px solid var(--border-color); padding: 10px; height: 70px; width: 70px;">
+                        <img src="assets/img/company-logo2.png" 
+                             class="max-w-full max-h-full object-contain" 
+                             alt="غيداء">
+                      </div>
+                      <div class="flex flex-col">
+                        <h2 class="text-sm font-medium mb-1">غيداء</h2>
+                        <span class="text-lg font-bold flex items-center gap-1">780 <img src="assets/img/riyal.svg" class="w-4 h-4"></span>
+                        <div class="text-gray-500 text-xs mt-1">3.15.2025 · 11:30 · الأحد</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Accept Button - Full width on mobile, auto on desktop -->
+                    <button onclick="openModal()" class="cursor-pointer font-semibold bg-[var(--primary)] text-white py-2 px-6 rounded-md hover:bg-orange-600 text-sm border border-solid border-[var(--border-color)] w-full sm:w-auto mt-3 sm:mt-0">
+                      قبول
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Services Tags -->
+                <div class="flex flex-wrap gap-2 justify-end">
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تغليف محكم</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">نقل أثاث</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب مطبخ</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب مكيفات</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed flex-grow">
+                  نهتم بالتفاصيل الصغيرة قبل الكبيرة من تغليف آمن، إلى نقل احترافي بدون أي خدوش أو ضرر. نحرص على الوصول في الوقت المحدد، ونسهّل عليك كل خطوة. كل التكاليف واضحة من البداية، بدون أي مفاجآت. والأهم؟ أثاثك تحت التأمين طول الرحلة.
+                </p>
+              </div>
+            </div>
+          
+            <!-- Third Card -->
+            <div class="col-md-4 d-flex mb-4">
+              <div  class="w-full bg-white p-2 space-y-4 text-right border-2 border-solid border-[var(--border-color)] rounded-lg flex flex-col h-full">
+                <!-- Header Section -->
+                <div class="rtl border-b pb-4" dir="rtl">
+                  <div class="flex flex-col sm:flex-row justify-between items-start gap-3">
+                    <!-- Logo and Text - Full width on mobile, auto on desktop -->
+                    <div class="flex items-start gap-3 w-full sm:w-auto sm:flex-grow">
+                      <div class="company-logo flex items-center justify-center shrink-0" 
+                           style="background-color: #FDFDFD; border-radius: 12px; border: 2px solid var(--border-color); padding: 10px; height: 70px; width: 70px;">
+                        <img src="assets/img/company-logo.png" 
+                             class="max-w-full max-h-full object-contain" 
+                             alt="فاست موف لنقل الآتات">
+                      </div>
+                      <div class="flex flex-col">
+                        <h2 class="text-sm font-medium mb-1">فاست موف لنقل الآتات</h2>
+                        <span class="text-lg font-bold flex items-center gap-1">780 <img src="assets/img/riyal.svg" class="w-4 h-4"></span>
+                        <div class="text-gray-500 text-xs mt-1">3.15.2025 · 11:30 · الأحد</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Accept Button - Full width on mobile, auto on desktop -->
+                    <button onclick="openModal()" class="cursor-pointer font-semibold bg-[var(--primary)] text-white py-2 px-6 rounded-md hover:bg-orange-600 text-sm border border-solid border-[var(--border-color)] w-full sm:w-auto mt-3 sm:mt-0">
+                      قبول
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Services Tags -->
+                <div class="flex flex-wrap gap-2 justify-end">
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تأمين ضد الفقد والكسر</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب دواليب</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب مطبخ</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تركيب مكيفات</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">تغليف محكم</span>
+                  <span class="px-2 py-1 text-[var(--primary)] rounded-lg text-xs border border-solid border-[var(--border-color)]">نقل أثاث</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed flex-grow">
+                  مرحبًا، شكرًا لك على اهتمامك. بخدماتنا نتميز باحترافية عالية في نقل الأثاث دون خدوش أو تلف، مع توفير تغليف آمن لحماية ممتلكاتك. نلتزم بالمواعيد بدقة لضمان راحتك. أسعارنا شفافة بدون رسوم مخفية، بالإضافة إلى تأمين لحماية الأثاث أثناء النقل. نحن مستعدون لنقل أثاثك بكل سهولة، اضغط على "قبول" للبدء الآن!
+                </p>
+              </div>
+            </div>
+          </div>
+            
+      </div>
+  </section>
+
+
+
+
+    <!-- Track Order -->
+    <section class="mx-auto py-10 w-full max-w-6xl">
+        <div class="d-flex justify-content-between" style="    margin-bottom: -25px;">
+            <p class="color-primary">التفاصيل</p>
+    
+            <p class="text-bold text-lg color-dark"><strong>
+                الشحنة الحالية
+            </strong></p>
+        </div>
+        <div class="parent-box">
+            <div class="d-flex justify-content-between align-items-center">
+                <i class="fa-solid fa-chevron-left"></i>
+                <div class="d-flex align-items-center">
+                    <div style="margin-right: 20px;">
+                        <p style="text-align: right;    margin-bottom: 0px;    margin-top: 16px;" class="text-lg color-dark max-md:text-sm ">#HWDSF776567DS</p>
+                        <p style="direction: rtl;color: var(--text-light);" class="max-md:text-sm ">03.15.2025  <span>• السبت</span></p>
+                    </div>
+                    <img src="assets/img/circle-box.svg" class="circle-box" alt="">
+                </div>
+            </div>
+            <img src="assets/img/track.svg" alt="" class="margin-auto w-100">
+
+            <div class="d-flex justify-content-between text-center">
+                <!-- Left: إلى -->
+                <div>
+                  <p class="color-primary mb-1 text-start max-md:text-sm">إلى</p>
+                  <p class="font-light text-lg color-dark mb-0 max-md:text-sm"><strong>الموقع 2</strong></p>
+                </div>
+              
+                <!-- Center: التحميل -->
+                <div class="align-self-end">
+                  <p class="font-light text-lg color-dark mb-0 max-md:text-sm"><strong>التحميل</strong></p>
+                </div>
+              
+                <!-- Right: من -->
+                <div>
+                  <p class="color-primary mb-1 text-end max-md:text-sm">من</p>
+                  <p class="font-light text-lg color-dark mb-0 max-md:text-sm"><strong>الموقع 1</strong></p>
+                </div>
+              </div>
+              
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Status -->
+<!-- <div  class="mx-auto py-10 w-full max-w-6xl">
+    <div class="d-flex justify-content-between">
+        <p class="color-primary">التفاصيل</p>
+
+        <p class="text-bold text-lg color-dark"><strong>
+            الشحنة الحالية
+        </strong></p>
+    </div>
+        <img src="assets/img/home-status.png" alt="" style="margin: auto; padding-top:10px;">
+
+
+        
+</div> -->
+
+  </section>
+  
+  <img src="assets/img/box.svg" alt="" style="margin: auto; padding-top:10px;">
+
+
+  <!-- Form -->
+  <section class="mx-auto px-4 w-full max-w-6xl">
+    <div class="row align-items-center d-flex">
+      <div class="col-md-7 d-flex justify-content-center">
+        <form class="contact-form w-100">
+          <div class="form-group">
+            <label for="name" class="form-label">الاسم كاملاً</label>
+            <input type="text" id="name" class="form-input" placeholder="أدخل اسمك الأول">
+          </div>
+  
+          <div class="form-row d-flex gap-3 mt-4">
+            <div class="form-col flex-fill">
+              <div class="form-group">
+                <label for="email" class="form-label color-primary">البريد الإلكتروني</label>
+                <input type="text" id="text" class="form-input" placeholder="أدخل بريدك الإلكتروني">
+              </div>
+            </div>
+            <div class="form-col flex-fill">
+              <div class="form-group">
+                <label for="subject" class="form-label">عنوان الرسالة</label>
+                <select id="subject" class="form-select">
+                  <option value="" disabled selected>أدخل اسمك الأخير</option>
+                  <option value="استفسار">استفسار</option>
+                  <option value="شكوى">شكوى</option>
+                  <option value="مقترح">مقترح</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="message" class="form-label ">الرسالة</label>
+            <textarea id="message" class="form-textarea w-100" placeholder="أدخل نص الرسالة هنا"></textarea>
+          </div>
+  
+          <button type="submit" class="submit-btn w-100 mt-3">إرسال الرسالة</button>
+        </form>
+      </div>
+  
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+        <div class="container contact-info-section" style="max-width: 600px; font-family: 'Expo Arabic', sans-serif; direction: rtl;">
+          <!-- Header -->
+          <div style="text-align: right; margin-bottom: 30px;">
+            <h2 class="color-dark" style=" font-size: 28px; font-weight: 700; margin-bottom: 15px;">تواصل معنا</h2>
+            <p class="color-dark" style="font-size: 16px; line-height: 1.6;">
+              نسعد بتواصلك معنا، يُرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.
+            </p>
+          </div>
+  
+          <!-- Contact Items -->
+          <div style="display: flex; flex-direction: column; gap: 25px;">
+            <!-- Email -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/email.png"class="form-icon" alt="Email icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">البريد الإلكتروني</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important;">info@naqlah.com</div>
+              </div>
+            </div>
+  
+            <!-- Phone -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/call.png" class="form-icon" alt="Phone icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">اتصل بنا</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important; direction:ltr !important">+966 839 474 85 03</div>
+              </div>
+            </div>
+  
+            <!-- Address -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/loc.png" class="form-icon" alt="Location icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">عنواننا</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important;">حي النسيم الغربي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</div>
+<!-- Modal -->
+<div id="cardModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+  <div class="bg-white p-6 rounded-lg w-full max-w-md relative text-center">
+
+    <!-- Close Button (Top Right) -->
+    <button onclick="closeModal()" class="absolute top-2 right-2">
+      <img src="assets/img/close.svg" alt="Close" class="w-8">
+    </button>
+
+    <!-- Question Mark Icon (Centered) -->
+    <div class="flex justify-center mb-4">
+      <img src="assets/img/question.svg" alt="Question" class="w-30">
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-xl font-bold mb-2">قبول الشركة؟</h2>
+
+    <!-- Paragraph -->
+    <p class="text-gray-600 text-sm mb-8 leading-relaxed">
+      بعد قبولك سوف يتم بدئ رحلة النقل مع شركة النقل فاست موف لنقل الأثاث حسب التاريخ والساعة المحددة, هل أنت متأكد؟
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex justify-center gap-4">
+     
+    
+      
+      <!-- Cancel Button -->
+      <button  onclick="closeModal()"class="bg-white text-gray-700 font-semibold py-2 px-6 rounded-md w-[30%] border border-[var(--border-color)] hover:bg-gray-100">
+        تراجع
+      </button>
+
+       <!-- Yes Button -->
+      <button  onclick="closeModal()"class="bg-[var(--primary)] text-white font-semibold py-2 px-6 rounded-md w-[60%] hover:bg-orange-600">
+        نعم
+      </button>
+    </div>
+
+  </div>
+</div>
+<script>
+  function openModal() {
+    document.getElementById('cardModal').classList.remove('hidden');
+    document.getElementById('pageContent').classList.add('blur-sm'); // Add blur
+  }
+
+  function closeModal() {
+    document.getElementById('cardModal').classList.add('hidden');
+    document.getElementById('pageContent').classList.remove('blur-sm'); // Remove blur
+  }
+</script>
+
+
+<!-- Footer -->
+
+<footer class="text-white pt-5 pb-3 " style="background-color:var(--primary); background-image: url('assets/img/footer-bg.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+  <div class="container">
+    <div class="row text-center text-md-end align-items-start">
+      
+      <!-- App Links -->
+      <div class="col-md-2 mb-4">
+        <div class="d-grid gap-3">
+          <a href="#" class="btn btn-light text-dark d-flex align-items-center justify-content-center gap-2; width:90%">
+            <i class="fab fa-apple"></i>&nbsp; App Store
+          </a>
+          <a href="#" class="btn btn-light text-dark d-flex align-items-center justify-content-center gap-2; width:90%">
+            <i class="fab fa-google-play"></i>&nbsp; Play Store
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Column 1 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">روابط أخرى</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">سياسة الخصوصية</a></li>
+          <li><a href="#" class="text-white text-decoration-none">الشروط والأحكام</a></li>
+          <li><a href="#" class="text-white text-decoration-none">الأسئلة والإستفسارات</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 2 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">في الموقع</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">تتبع النقل</a></li>
+          <li><a href="#" class="text-white text-decoration-none">تواصل معنا</a></li>
+          <li><a href="#" class="text-white text-decoration-none">العنوان</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 3 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">في الموقع</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">الرئيسية</a></li>
+          <li><a href="#" class="text-white text-decoration-none">خدماتنا</a></li>
+          <li><a href="#" class="text-white text-decoration-none">من نحن</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo & Social -->
+      <div class="col-md-4 text-center text-md-end d-flex flex-column align-items-center align-items-md-end">
+        <img src="assets/img/footer-logo.png" class="mb-3" style="max-width: 130px;" alt="footer logo">
+        
+        <div class="mb-3 d-flex gap-3">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <p class="mb-0"><i class="far fa-copyright"></i> 2025 جميع الحقوق محفوظة لدى شركة نقلة</p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

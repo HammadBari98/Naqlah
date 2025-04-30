@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقل خالي من التوتر</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/expo-arabic" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/area-normal" rel="stylesheet">
+    <link href="https://cdn.example.com/shamel-font.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-50">
+
+<!-- Simple Header -->
+<?php include 'header.php'?>
+
+
+<section class="hero-container">
+    <img
+        src="assets/img/home-banner.png"
+        class="hero-image"
+        alt="Moving Truck"
+    />
+    <article class="hero-content">
+        <h1 class="hero-title">
+            <span class="title-part1">ابدأ طلبك الآن واستمتع</span><br>
+            <span class="title-part2">بتجربة نقل خالية من التوتر!</span>
+        </h1>
+        <p class="hero-description">
+            جاهز للانتقال؟ احجز موعدًا، حدّد تفاصيلك وراقب فريقنا المحترف ينجز المهمة بكفاءة وسرعة
+        </p>
+        <button class="cta-button">
+            أطلب نقلة
+        </button>
+    </article>
+</section>
+
+<!-- Home Mid -->
+
+<section class="container mx-auto px-4">
+    <!-- Desktop Image (hidden on mobile) -->
+    <img 
+      src="assets/img/home-mid.svg" 
+      class="hidden sm:block mx-auto py-10 w-full max-w-6xl"
+      alt="Desktop Banner"
+    >
+  
+    <!-- Mobile Grid (shown only on mobile) -->
+    <div class="sm:hidden grid grid-cols-2 gap-0 bg-white rounded-lg overflow-hidden" style="border: 2px solid var(--border-color); border-radius: 8px;">
+      <!-- Row 1 -->
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid1.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="تتبع مباشر"
+        >
+        <p class="text-sm md:text-base">تتبع مباشر</p>
+      </div>
+      
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-bottom: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid2.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="فك وتركيب"
+        >
+        <p class="text-sm md:text-base">فك وتركيب</p>
+      </div>
+      
+      <!-- Row 2 -->
+      <div class="flex flex-col items-center justify-center gap-2 p-4 relative" style="border-right: 1px solid var(--border-color);">
+        <img 
+          src="assets/img/home-mid3.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="تغليف محكم"
+        >
+        <p class="text-sm md:text-base">تغليف محكم</p>
+      </div>
+      
+      <div class="flex flex-col items-center justify-center gap-2 p-4">
+        <img 
+          src="assets/img/home-mid4.svg" 
+          class="w-[50px] h-[50px] md:w-[80px] md:h-[80px] object-cover"
+          alt="نقل الأثاث"
+        >
+        <p class="text-sm md:text-base">نقل الأثاث</p>
+      </div>
+    </div>
+
+
+    <!-- Status -->
+<!-- <div  class="mx-auto py-10 w-full max-w-6xl">
+    <div class="d-flex justify-content-between">
+        <p class="color-primary">التفاصيل</p>
+
+        <p class="text-bold text-lg color-dark"><strong>
+            الشحنة الحالية
+        </strong></p>
+    </div>
+        <img src="assets/img/home-status.png" alt="" style="margin: auto; padding-top:10px;">
+
+
+        
+</div> -->
+
+  </section>
+  
+  <img src="assets/img/box.svg" alt="" style="margin: auto; padding-top:10px;">
+
+
+  <!-- Form -->
+  <section class="mx-auto px-4 w-full max-w-6xl">
+    <div class="row align-items-center d-flex">
+      <div class="col-md-7 d-flex justify-content-center">
+        <form class="contact-form w-100">
+          <div class="form-group">
+            <label for="name" class="form-label">الاسم كاملاً</label>
+            <input type="text" id="name" class="form-input" placeholder="أدخل اسمك الأول">
+          </div>
+  
+          <div class="form-row d-flex gap-3 mt-4">
+            <div class="form-col flex-fill">
+              <div class="form-group">
+                <label for="email" class="form-label color-primary">البريد الإلكتروني</label>
+                <input type="text" id="text" class="form-input" placeholder="أدخل بريدك الإلكتروني">
+              </div>
+            </div>
+            <div class="form-col flex-fill">
+              <div class="form-group">
+                <label for="subject" class="form-label">عنوان الرسالة</label>
+                <select id="subject" class="form-select">
+                  <option value="" disabled selected>أدخل اسمك الأخير</option>
+                  <option value="استفسار">استفسار</option>
+                  <option value="شكوى">شكوى</option>
+                  <option value="مقترح">مقترح</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="message" class="form-label ">الرسالة</label>
+            <textarea id="message" class="form-textarea w-100" placeholder="أدخل نص الرسالة هنا"></textarea>
+          </div>
+  
+          <button type="submit" class="submit-btn w-100 mt-3">إرسال الرسالة</button>
+        </form>
+      </div>
+  
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+        <div class="container contact-info-section" style="max-width: 600px; font-family: 'Expo Arabic', sans-serif; direction: rtl;">
+          <!-- Header -->
+          <div style="text-align: right; margin-bottom: 30px;">
+            <h2 class="color-dark" style=" font-size: 28px; font-weight: 700; margin-bottom: 15px;">تواصل معنا</h2>
+            <p class="color-dark" style="font-size: 16px; line-height: 1.6;">
+              نسعد بتواصلك معنا، يُرجى ملء النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن.
+            </p>
+          </div>
+  
+          <!-- Contact Items -->
+          <div style="display: flex; flex-direction: column; gap: 25px;">
+            <!-- Email -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/email.png"class="form-icon" alt="Email icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">البريد الإلكتروني</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important;">info@naqlah.com</div>
+              </div>
+            </div>
+  
+            <!-- Phone -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/call.png" class="form-icon" alt="Phone icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">اتصل بنا</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important; direction:ltr !important">+966 839 474 85 03</div>
+              </div>
+            </div>
+  
+            <!-- Address -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="background-color: #F5F5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/loc.png" class="form-icon" alt="Location icon">
+              </div>
+              <div>
+                <div style="font-size: 24px; margin-bottom: 5px; font-weight:500;font-family: 'Shamel', sans-serif !important;"class="color-primary">عنواننا</div>
+                <div style="color: #333; font-size: 18px;  font-family: 'Area Normal' !important;">حي النسيم الغربي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Modal -->
+<div id="cardModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white p-8 rounded-2xl w-full max-w-md shadow-lg relative text-center">
+  
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-4 right-4">
+        <img src="assets/img/close.svg" alt="Close" class="w-6 h-6">
+      </button>
+  
+      <!-- Icon -->
+      
+      <!-- Title -->
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">تسجل الدخول</h2>
+      <p class="light" style="margin-top: -10px; color: var(--text-light2)">يرجى إدخال رقم الهاتف</p>
+      <form>
+        <div class="form-group">
+          <label for="phone" class="form-label">رقم الهاتف</label>
+          <div class="d-flex justify-content-between align-items-center border rounded px-2 py-1">
+            <span class="text-muted text-sm">+966</span>
+            <input type="text" id="phone" class="form-control border-0 text-end text-xs" placeholder="أدخل رقم الهاتف" />
+            <!-- <span class="text-muted">+966</span> -->
+          </div>
+        </div>
+         
+  
+      <!-- Confirm Button -->
+<button type="button" onclick="openOtpModal()" class="mt-4 w-100 py-2 rounded-lg bg-[var(--primary)] text-white font-medium hover:bg-orange-600 transition">
+  تسجيل الدخول
+</button>
+      </form>
+      <div class="d-flex align-items-center my-3">
+        <div class="flex-grow-1 border-top"></div>
+        <span class="mx-2 text-muted">أو سجل دخول عبر</span>
+        <div class="flex-grow-1 border-top"></div>
+      </div>
+      <div class="d-flex align-items-center my-3 justify-content-center gap-3">
+  <img src="assets/img/social (1).svg" alt="">
+  <img src="assets/img/social (2).svg" alt="">
+  <img src="assets/img/social (3).svg" alt="">
+</div>     
+<p style="color:var(--primary); font-size:14px">
+  أدخل كزائر
+</p> 
+    
+      <!-- Action Buttons -->
+      <div class="flex justify-center gap-4">
+      
+      </div>
+  
+    </div>
+  </div>
+  <!-- OTP Modal -->
+<div id="otpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-2xl w-full max-w-md shadow-lg relative text-center">
+    <!-- Close Button -->
+    <button onclick="closeOtpModal()" class="absolute top-4 right-4">
+      <img src="assets/img/close.svg" alt="Close" class="w-6 h-6">
+    </button>
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">تسجل الدخول</h2>
+    <p class="light" style="margin-top: -10px; color: var(--text-light2)"><b>+9663384572266</b> <span>يرجى إدخال رمز التحقق المرسل إلى</span></p>
+   
+    <label for="phone" class="form-label"> رمز التحقق</label>
+    <div class="flex justify-between gap-2 mb-4">
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded" />
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded" />
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded" />
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded" />
+      <input type="text" maxlength="1" class="w-14 h-14 text-center border border-gray-300 rounded" />
+    </div>
+
+    <p class="light py-4" style="margin-top: -10px; color: var(--text-light2)"><span>لم يصل إليك الرمز بعد؟</span><span style="color:var(--primary)">إعادة الارسال</span></p>
+   
+    
+    <button onclick="closeOtpModal()" class="w-full py-2 rounded-lg bg-[var(--primary)] text-white font-medium hover:bg-orange-600 transition">
+      تسجيل الدخول
+    </button>
+  </div>
+</div>
+
+  <!-- Optional: Blur background when modal is open -->
+  <style>
+    body.modal-open .hero-container,
+    body.modal-open .container,
+    body.modal-open section,
+    body.modal-open footer {
+      filter: blur(5px) brightness(0.7);
+      pointer-events: none;
+    }
+  </style>
+  
+  <!-- Script -->
+  <script>
+    function openOtpModal() {
+      closeModal(); // Close the first modal
+      document.getElementById('otpModal').classList.remove('hidden');
+    }
+  
+    function closeOtpModal() {
+      document.getElementById('otpModal').classList.add('hidden');
+    }
+    document.querySelectorAll('#otpModal input').forEach((input, idx, inputs) => {
+      input.addEventListener('input', () => {
+        if (input.value.length === 1 && idx < inputs.length - 1) {
+          inputs[idx + 1].focus();
+        }
+      });
+    });
+    
+  </script>
+  
+  <script>
+    function openModal() {
+      document.getElementById('cardModal').classList.remove('hidden');
+      document.body.classList.add('modal-open');
+    }
+  
+    function closeModal() {
+      document.getElementById('cardModal').classList.add('hidden');
+      document.body.classList.remove('modal-open');
+    }
+  
+    // Open modal when page loads
+    window.addEventListener('load', function() {
+      openModal();
+    });
+  </script>
+  
+
+<!-- Footer -->
+
+<?php include 'footer.php'?>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
